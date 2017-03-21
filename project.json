@@ -1,0 +1,7 @@
+{
+    "AnalysisName": "SomeAnalysis",
+    "FilterExpression": "sample-type:filesample",
+    "MassApiURL": "http://localhost:5000/api/", 
+    "MassApiKey": "<your_api_key>",
+    "Description": "Short discription of the analysis plugin."
+}
