@@ -32,4 +32,4 @@ if __name__ == "__main__":
     config = configparser.ConfigParser()
     config.read('config.ini')
     update_config_from_env(config)
-    {{AnalysisName | toTitle}}AnalysisInstance(config).start()
+    {{AnalysisName | title}}AnalysisInstance(config).start()
