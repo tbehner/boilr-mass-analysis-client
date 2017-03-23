@@ -15,9 +15,9 @@ log = logging.getLogger('{{AnalysisName | toLower}}_analysis_system')
 log.setLevel(logging.INFO)
 
 class {{AnalysisName | title}}AnalysisInstance(AnalysisClient):
-    def __init__(self, **kwargs):
+    def __init__(self, config):
+        super().__init__(config)
         # TODO put your initialization here
-        super().__init__(**kwargs)
 
     def analyze(self, scheduled_analysis):
         sample = scheduled_analysis.get_sample()
@@ -32,4 +32,4 @@ if __name__ == "__main__":
     config = configparser.ConfigParser()
     config.read('config.ini')
     update_config_from_env(config)
-    {{AnalysisName | toTitle}}AnalysisInstance.create_from_config(config).start()
+    {{AnalysisName | toTitle}}AnalysisInstance(config).start()
